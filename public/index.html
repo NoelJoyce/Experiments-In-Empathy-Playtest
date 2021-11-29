@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Empathy Experiment</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 id = "project_heading" style="font-size: 60px
+    ;">Experiments In Empathy</h1>
+
+    <h2 style="color:rgb(110, 12, 221);">
+     What is this experiment about?
+        
+    </h2>
+    <p><h3>This experiment is designed to help those of us who do not understand what it is like to have a physical diffculty to recreate
+        and experience what it is like to have a difficulty. 
+        In this experiment we will concetrate on finger dexterity. 
+        The goal is to help us to understand how hard it can be for people with limited 
+        capability and chronic pain to do everyday things.</h3></p>
+        
+    <section class = "visuals_section">
+<img class = "project_image" src="Yuan Coins.jpg" alt="2 coins laying flat">
+<img class = "project_image" src="Roll of Adhesive Tape.jpg" alt="a roll of clear adhesive tape">
+<img class = "project_image" src="pot.bottle.doorknob.shampoo.jpg" alt="a pot, a doorknob, a shampoo bottle and a drinks bottle">
+<h2 class = "items_required" style="color:rgb(110, 12, 221) ;">Gather these items.</h2>
+<h3>1. 10 coins.</h3>
+<h3>2. Clear adhesive tape.</h3>
+<h3>3. Saucepan, screw top bottle, shampoo bottle, access to a doorknob.</h3>
+
+    </section>
+    <section class = "visuals_section">
+        <h2 class = "setup_experiment" style="color: rgb(110, 12, 221);">Instructions on how to set up the experiment.
+        </h2>
+        <h3>1. On each of the knuckles of your hands tape a coin onto the outside of your knuckle. 
+        
+            </h3>
+            <h3>2. Make sure it is secure.</h3>
+            <h3>3. Watch the video for reference of how it should look when completed.</h3>
+            <iframe 
+            class = "instruction_video"
+            width="560" height="415"
+            src="https://drive.google.com/file/d/1yEss001ngRi-5FgpXciSwzjGEcC9b7Om/preview"
+            allow="autoplay"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+            picture-in-picture" allowfullscreen>
+          </iframe>
+    </section>
+    <h2 style="color: rgb(110, 12, 221);">
+        What to do next
+    </h2>
+    <h3>Here are some basic things you can try with your new found disability. Use the items you have gathered to experience the every day life of those who are differently abled. Try other simple tasks and everyday chores to expand your empathy.</h3>
+    <h3>1. Pick up the saucepan and fill it with water.</h3>
+    <h3>2. Open a door.</h3>
+    <h3>3. Open the drink bottle.</h3>
+    <h3>4. Run water over the shampoo bottle and then try to grip and open it.</h3>
+
+<p><h2 style="color: rgb(110, 12, 221);">Talk about your experiences and share your thoughts, as innovators this is a great chance to explore ideas on how we might solves issues around dexterity challenges!</h2></p>
+
+    <div class="container">
+      <!-- View chat messages here here -->
+      <div class="sub-container chat-feed">
+          <div class="chat-header"><h2>Let's talk about what we learned</h2></div>
+          <div class="chat-box" id="chat-box-msgs"></div>
+      </div>
+
+      <!-- Enter chat messages here -->
+      <div class="sub-container chat-input">
+          <input type="text" class="chat-input-name" id="name-input" placeholder="Name" />
+          <input type="text" class="chat-input-msg" id="msg-input" placeholder="Message" />
+          <button id="send-button">Send</button>
+
+          <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+          <script src="app.js"></script>
+      </div>
+     
+  </div>
+  <div class = "file-upload">
+    <!--  Include socket.io lib in client side  -->
+    <button id="send-button">Upload</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</div>
+  </body>
+</html>
