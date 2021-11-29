@@ -3,10 +3,16 @@ let express = require('express');
 let app = express();
 app.use('/', express.static('public'));
 
+//Parse JSON data
+app.use(express.json({ limit: '25mb' }));
+app.use(express.urlencoded({
+    extended: true,
+    limit: '25mb'
+}));
 //Initialize the actual HTTP server
 let http = require('http');
 let server = http.createServer(app);
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 5000;
 server.listen(port, () => {
     console.log("Server listening at port: " + port);
 });
@@ -40,18 +46,6 @@ io.sockets.on('connection', function(socket) {
         console.log("A client has disconnected: " + socket.id);
     });
 });
-// Require the express lib, which is listed in package.json
-
-// Within the public folder, we will be building the "client" code,
-// which is everything that gets displayed and happens on the actual webpage
-app.use('/', express.static('public'));
-
-//Parse JSON data
-app.use(express.json({ limit: '25mb' }));
-app.use(express.urlencoded({
-    extended: true,
-    limit: '25mb'
-}));
 
 //DB initial code
 let Datastore = require('nedb');
